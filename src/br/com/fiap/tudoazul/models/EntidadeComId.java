@@ -2,6 +2,9 @@ package br.com.fiap.tudoazul.models;
 
 import java.util.Random;
 
+/**
+ * Classe que representa uma entidade no sistema que possui um ID
+ */
 public abstract class EntidadeComId {
 	/**
 	 * Identificador interno da entidade no sistema
