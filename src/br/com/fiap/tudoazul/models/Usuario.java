@@ -9,14 +9,9 @@ import java.util.Random;
  * @author Gustavo Azevedo
  * @version 1.0
  */
-public class Usuario implements Serializable {
+public class Usuario extends EntidadeComId implements Serializable {
 
-	private static final long serialVersionUID = -8346452956495429009L;
-
-	/**
-	 * Identificador interno do usuário no sistema
-	 */
-	private int id;
+	private static final long serialVersionUID = -8346452956495429009L;	
 	
 	/**
 	 * Email do usuário
@@ -56,17 +51,7 @@ public class Usuario implements Serializable {
 		this.setEmail(email);
 		this.setSenha(senha);
 		this.setNomeUsuario(nomeUsuario);		
-	}
-
-	/**
-	 * Método que "cria" um usuário
-	 * @return O ID recém inserido do usuário
-	 */
-	public int inserir() {
-		int idRecemCadastrado = new Random().nextInt();
-		this.setId(idRecemCadastrado);
-		return Math.abs(idRecemCadastrado);
-	}
+	}	
 
 	/**
 	 * Exibe alguns dados básicos do usuário
@@ -98,14 +83,6 @@ public class Usuario implements Serializable {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getEmail() {
