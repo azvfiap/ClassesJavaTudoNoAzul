@@ -27,7 +27,6 @@ public class CalculadoraMovimentacao implements Serializable {
 	public double calculaSaldo() {
 		System.out.println("CALCULANDO SALDO");
 		return 5555;
-		
 	}
 	
 	public double calculaSaldo(TipoMovimentacao filtro) {

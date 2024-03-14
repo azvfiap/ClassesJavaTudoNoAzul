@@ -4,8 +4,6 @@ import br.com.fiap.tudoazul.models.BancoUsuario;
 import br.com.fiap.tudoazul.models.CalculadoraMovimentacao;
 import br.com.fiap.tudoazul.models.Carteira;
 import br.com.fiap.tudoazul.models.Movimentacao;
-import br.com.fiap.tudoazul.models.Tag;
-import br.com.fiap.tudoazul.models.TipoMovimentacao;
 import br.com.fiap.tudoazul.models.TipoMovimentacaoCredito;
 import br.com.fiap.tudoazul.models.TipoMovimentacaoDebito;
 import br.com.fiap.tudoazul.models.Usuario;
