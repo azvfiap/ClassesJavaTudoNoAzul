@@ -20,6 +20,7 @@ public class Main {
 		Movimentacao depositoSalario = new Movimentacao(5000, "Deposito mensal salário", user,
 				new TipoMovimentacaoCredito(), carteira);
 		depositoSalario.setRecorrente(true);
+		depositoSalario.setDiaRecorrencia(28);
 
 		Movimentacao pixRecebido = new Movimentacao(60, "PIX FULANO", user, new TipoMovimentacaoCredito(), carteira);
 		depositoSalario.inserir();
@@ -32,7 +33,8 @@ public class Main {
 		
 		CalculadoraMovimentacao calculadora = new CalculadoraMovimentacao(new Movimentacao[] {depositoSalario, pixRecebido, assinaturaSpotify});
 		
-		calculadora.calculaSaldo();
+		double saldo = calculadora.calculaSaldo();
+		System.out.println("FINALIZADO..." + saldo);
 	}
 
 	public static Usuario criaUsuario() {

@@ -3,18 +3,59 @@ package br.com.fiap.tudoazul.models;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * Classe que representa uma movimentacao de dinheiro
+ * 
+ * @author Gustavo Azevedo
+ * @version 1.0
+ */
 public class Movimentacao extends EntidadeInserivel implements Serializable {
 
 	private static final long serialVersionUID = -2936699347394617992L;
 
+	/**
+	 * Valor da movimentacao
+	 */
 	private double valor;
+	
+	/**
+	 * Identificação da movimentação
+	 */
 	private String nome;
+	
+	/**
+	 * Indica se a movimentação é recorrente
+	 */
 	private boolean recorrente = false;
+	
+	/**
+	 * Indica qual o dia da recorrencia dessa movimentacao
+	 */
 	private int diaRecorrencia;
+	
+	/**
+	 * Guarda qual o dia que a movimentacao foi feita
+	 */
 	private Date dataMovimentacao = new Date();
+	
+	/**
+	 * Indica em qual carteira a movimentacao foi feita
+	 */
 	private Carteira carteira;
+	
+	/**
+	 * Indica qual o usuario realizou a movimentacao
+	 */
 	private Usuario usuario;
+	
+	/**
+	 * Tipo de movimentação, ex.: Crédito ou Débito
+	 */
 	private TipoMovimentacao tipoMovimentacao;
+	
+	/**
+	 * Tags customizadas de identificação da movimentacao
+	 */
 	private Tag[] tags;
 
 	public Movimentacao() {

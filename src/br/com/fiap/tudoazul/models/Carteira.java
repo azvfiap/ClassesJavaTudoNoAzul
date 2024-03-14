@@ -2,13 +2,30 @@ package br.com.fiap.tudoazul.models;
 
 import java.io.Serializable;
 
+/**
+ * Classe que representa a carteira do usuario
+ * 
+ * @author Gustavo Azevedo
+ * @version 1.0
+ */
 public class Carteira extends EntidadeInserivel implements Serializable {
 
 	private static final long serialVersionUID = 4332486842058868667L;
 
+	/**
+	 * Saldo da carteira
+	 */
 	private double saldo;
+	
+	/**
+	 * Usuario a qual a carteira pertence
+	 */
 	private Usuario usuario;
-	private BancoUsuario banco;
+	
+	/**
+	 * Possível banco que a carteira pode pertencer
+	 */
+	private BancoUsuario banco = null;
 
 	public Carteira() {
 

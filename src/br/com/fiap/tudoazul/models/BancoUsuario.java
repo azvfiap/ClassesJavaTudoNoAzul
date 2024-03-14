@@ -2,14 +2,39 @@ package br.com.fiap.tudoazul.models;
 
 import java.io.Serializable;
 
+/**
+ * Classe que representa os dados de um banco do usuário
+ * 
+ * @author Gustavo Azevedo
+ * @version 1.0
+ */
 public class BancoUsuario extends EntidadeInserivel implements Serializable {
 
 	private static final long serialVersionUID = -283285489607573933L;
 
+	/**
+	 * Numero da Agencia
+	 */
 	private String agencia;
+	
+	/**
+	 * Numero da conta
+	 */
 	private String conta;
+	
+	/**
+	 * Nome do banco
+	 */
 	private String nomeBanco;
+	
+	/**
+	 * Codigo do banco
+	 */
 	private String codigoBanco;
+	
+	/**
+	 * Usuario ao qual o banco pertence
+	 */
 	private Usuario usuario;
 
 	public BancoUsuario() {
