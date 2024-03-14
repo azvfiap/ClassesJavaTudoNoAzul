@@ -2,42 +2,42 @@ package br.com.fiap.tudoazul.models;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Random;
 
 /**
  * Classe que representa um usuário que executa diversas operacoes no sistema
+ * 
  * @author Gustavo Azevedo
  * @version 1.0
  */
-public class Usuario extends EntidadeComId implements Serializable {
+public class Usuario extends EntidadeInserivel implements Serializable {
 
-	private static final long serialVersionUID = -8346452956495429009L;	
-	
+	private static final long serialVersionUID = -8346452956495429009L;
+
 	/**
 	 * Email do usuário
 	 */
 	private String email;
-	
+
 	/**
 	 * CPF do usuário
 	 */
 	private String cpf;
-	
+
 	/**
 	 * Data de nascimento do usuário
 	 */
 	private Date dataNascimento;
-	
+
 	/**
 	 * Nome do usuário
 	 */
 	private String nomeUsuario;
-	
+
 	/**
 	 * Data de cadastro do usuário no sistema
 	 */
 	private Date dataCadastro = new Date();
-	
+
 	/**
 	 * Senha do usuário
 	 */
@@ -47,11 +47,11 @@ public class Usuario extends EntidadeComId implements Serializable {
 
 	}
 
-	public Usuario(String email, String senha, String nomeUsuario) {
-		this.setEmail(email);
-		this.setSenha(senha);
-		this.setNomeUsuario(nomeUsuario);		
-	}	
+	public Usuario(String email, String nomeUsuario, String senha) {
+		this.email = email;
+		this.nomeUsuario = nomeUsuario;
+		this.senha = senha;
+	}
 
 	/**
 	 * Exibe alguns dados básicos do usuário
@@ -65,12 +65,13 @@ public class Usuario extends EntidadeComId implements Serializable {
 		sb.append("-----\n");
 		sb.append("DATA CADASTRO:" + this.getDataCadastro() + "-----\n");
 		sb.append("-----\n");
-		
+
 		System.out.println(sb.toString());
 	}
-	
+
 	/**
 	 * Verifica se o login do usuário está válido
+	 * 
 	 * @return Se o email e senha do usuario estão corretos
 	 */
 	public boolean validaLogin() {

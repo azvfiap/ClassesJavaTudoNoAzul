@@ -5,14 +5,18 @@ import java.util.Random;
 /**
  * Classe que representa uma entidade no sistema que possui um ID
  */
-public abstract class EntidadeComId {
+public abstract class EntidadeInserivel {
 	/**
 	 * Identificador interno da entidade no sistema
 	 */
 	protected int id;
-	
+
+	public EntidadeInserivel() {
+	}
+
 	/**
 	 * Método que "cria" um registro
+	 * 
 	 * @return O ID recém inserido
 	 */
 	public int inserir() {
